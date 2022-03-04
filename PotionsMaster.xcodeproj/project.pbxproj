@@ -23,6 +23,7 @@
 		84D08AB224B8DAE000B73A2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D08AB024B8DAE000B73A2C /* SceneDelegate.swift */; };
 		84EAA77924BADCD00004B53F /* IngredientListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EAA77824BADCD00004B53F /* IngredientListView.swift */; };
 		C708AE5F27D1A1750009D86D /* IngredientDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C708AE5E27D1A1750009D86D /* IngredientDB.swift */; };
+		C708AE6127D1D1180009D86D /* RealmMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C708AE6027D1D1180009D86D /* RealmMigrator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		84EAA77824BADCD00004B53F /* IngredientListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientListView.swift; sourceTree = "<group>"; };
 		A559DC44471214567BE3A0D4 /* Pods-PotionsMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PotionsMaster.release.xcconfig"; path = "Target Support Files/Pods-PotionsMaster/Pods-PotionsMaster.release.xcconfig"; sourceTree = "<group>"; };
 		C708AE5E27D1A1750009D86D /* IngredientDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDB.swift; sourceTree = "<group>"; };
+		C708AE6027D1D1180009D86D /* RealmMigrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMigrator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				84029D5124B7860500EDA4B7 /* IngredientForm.swift */,
 				84029D5624B7975000EDA4B7 /* IngredientMock.swift */,
 				C708AE5E27D1A1750009D86D /* IngredientDB.swift */,
+				C708AE6027D1D1180009D86D /* RealmMigrator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				C708AE5F27D1A1750009D86D /* IngredientDB.swift in Sources */,
 				84EAA77924BADCD00004B53F /* IngredientListView.swift in Sources */,
 				84029D5524B7897600EDA4B7 /* IngredientStore.swift in Sources */,
+				C708AE6127D1D1180009D86D /* RealmMigrator.swift in Sources */,
 				18D775C522AD944300AE281E /* ContentView.swift in Sources */,
 				84D08AB124B8DAE000B73A2C /* AppDelegate.swift in Sources */,
 				84029D5724B7975000EDA4B7 /* IngredientMock.swift in Sources */,
