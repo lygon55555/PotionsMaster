@@ -112,6 +112,19 @@ extension IngredientStore {
   }
 
   func delete(ingredientID: Int) {
-    // TODO: Add Realm delete code below
+    objectWillChange.send()
+    
+    guard let ingredientDB = boughtIngredientResults.first(
+      where: { $0.id == ingredientID })
+    else { return }
+    
+    do {
+      let realm = try Realm()
+      try realm.write {
+        realm.delete(ingredientDB)
+      }
+    } catch let error {
+      print(error.localizedDescription)
+    }
   }
 }
