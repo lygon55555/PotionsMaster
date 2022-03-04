@@ -57,7 +57,11 @@ struct IngredientRow: View {
           .environmentObject(self.store)
       }
       Spacer()
-      // TODO: Insert Circle view here
+      
+      Circle()
+        .fill(Color(ingredient.colorName))
+        .frame(width: 12, height: 12)
+      
       Button(action: buyOrDeleteIngredient) {
         Image(systemName: ingredient.bought ? "trash.circle.fill" : "circle")
           .resizable()

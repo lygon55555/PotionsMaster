@@ -49,7 +49,13 @@ struct IngredientFormView: View {
               .tag(option)
           }
         }
-        // TODO: Insert Picker here
+        
+        Picker(selection: $form.color, label: Text("Color")) {
+          ForEach(colorOptions, id: \.self) { option in
+            Text(option.title)
+          }
+        }
+        
         Section(header: Text("Notes📝")) {
           TextField("", text: $form.notes)
         }
