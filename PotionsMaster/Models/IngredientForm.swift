@@ -36,6 +36,8 @@ class IngredientForm: ObservableObject {
   @Published var title = ""
   @Published var notes = ""
   @Published var quantity = 1
+  @Published var color = ColorOptions.rayGreen
+  
   var ingredientID: Int?
 
   var updating: Bool {
@@ -49,5 +51,6 @@ class IngredientForm: ObservableObject {
     notes = ingredient.notes
     quantity = ingredient.quantity
     ingredientID = ingredient.id
+    color = ColorOptions(rawValue: ingredient.colorName) ?? .rayGreen
   }
 }

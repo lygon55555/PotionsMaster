@@ -36,6 +36,7 @@ struct Ingredient: Identifiable {
   let notes: String
   let bought: Bool
   let quantity: Int
+  var colorName = "rw-green"
 }
 
 extension Ingredient {
@@ -45,5 +46,6 @@ extension Ingredient {
     notes = ingredientDB.notes
     bought = ingredientDB.bought
     quantity = ingredientDB.quantity
+    colorName = ingredientDB.colorName
   }
 }

@@ -74,7 +74,8 @@ extension IngredientFormView {
     store.create(
       title: form.title,
       notes: form.notes,
-      quantity: form.quantity)
+      quantity: form.quantity,
+      colorName: form.color.name)
     dismiss()
   }
 
@@ -84,7 +85,8 @@ extension IngredientFormView {
         ingredientID: ingredientID,
         title: form.title,
         notes: form.notes,
-        quantity: form.quantity)
+        quantity: form.quantity,
+        colorName: form.color.name)
       dismiss()
     }
   }

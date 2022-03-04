@@ -39,6 +39,7 @@ class IngredientDB: Object {
   @objc dynamic var notes = ""
   @objc dynamic var quantity = 1
   @objc dynamic var bought = false
+  @objc dynamic var colorName = "rw-green"
   
   // override primaryKey() to tell Realm which property is the model's primary key
   // Realm uses primary keys to enforce uniqueness.

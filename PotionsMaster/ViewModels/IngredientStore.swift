@@ -56,7 +56,7 @@ final class IngredientStore: ObservableObject {
 
 // MARK: - CRUD Actions
 extension IngredientStore {
-  func create(title: String, notes: String, quantity: Int) {
+  func create(title: String, notes: String, quantity: Int, colorName: String) {
     // First, you send a signal to SwiftUI. Because IngredientStore is an ObservableObject, SwiftUI subscribes to objectWillChange and responds to the signal by reloading its view.
     objectWillChange.send()
     
@@ -68,6 +68,7 @@ extension IngredientStore {
       ingredientDB.title = title
       ingredientDB.notes = notes
       ingredientDB.quantity = quantity
+      ingredientDB.colorName = colorName
       
       try realm.write {
         realm.add(ingredientDB)
@@ -92,7 +93,7 @@ extension IngredientStore {
     }
   }
 
-  func update(ingredientID: Int, title: String, notes: String, quantity: Int) {
+  func update(ingredientID: Int, title: String, notes: String, quantity: Int, colorName: String) {
     objectWillChange.send()
     do {
       let realm = try Realm()
@@ -103,7 +104,8 @@ extension IngredientStore {
             "id": ingredientID,
             "title": title,
             "notes": notes,
-            "quantity": quantity],
+            "quantity": quantity,
+            "colorName": colorName],
           update: .modified)
       }
     } catch let error {
