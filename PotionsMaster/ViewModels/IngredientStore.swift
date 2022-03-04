@@ -34,8 +34,24 @@ import Foundation
 import RealmSwift
 
 final class IngredientStore: ObservableObject {
-  var ingredients: [Ingredient] = IngredientMock.ingredientsMock
-  var boughtIngredients: [Ingredient] = IngredientMock.boughtIngredientsMock
+  private var ingredientResults: Results<IngredientDB>
+  private var boughtIngredientResults: Results<IngredientDB>
+  
+  init(realm: Realm) {
+    ingredientResults = realm.objects(IngredientDB.self)
+      .filter("bought = false")
+    
+    boughtIngredientResults = realm.objects(IngredientDB.self)
+      .filter("bought = true")
+  }
+  
+  var ingredients: [Ingredient] {
+    ingredientResults.map(Ingredient.init)
+  }
+  
+  var boughtIngredients: [Ingredient] {
+    boughtIngredientResults.map(Ingredient.init)
+  }
 }
 
 // MARK: - CRUD Actions
@@ -62,11 +78,37 @@ extension IngredientStore {
   }
 
   func toggleBought(ingredient: Ingredient) {
-    // TODO: Add Realm update code below
+    objectWillChange.send()
+    do {
+      let realm = try Realm()
+      try realm.write {
+        realm.create(
+          IngredientDB.self,
+          value: ["id": ingredient.id, "bought": !ingredient.bought],
+          update: .modified)
+      }
+    } catch let error {
+      print(error.localizedDescription)
+    }
   }
 
   func update(ingredientID: Int, title: String, notes: String, quantity: Int) {
-    // TODO: Add Realm update code below
+    objectWillChange.send()
+    do {
+      let realm = try Realm()
+      try realm.write {
+        realm.create(
+          IngredientDB.self,
+          value: [
+            "id": ingredientID,
+            "title": title,
+            "notes": notes,
+            "quantity": quantity],
+          update: .modified)
+      }
+    } catch let error {
+      print(error.localizedDescription)
+    }
   }
 
   func delete(ingredientID: Int) {
