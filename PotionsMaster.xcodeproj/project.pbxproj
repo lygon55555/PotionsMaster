@@ -11,6 +11,7 @@
 		18D775C722AD944400AE281E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C622AD944400AE281E /* Assets.xcassets */; };
 		18D775CA22AD944400AE281E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C922AD944400AE281E /* Preview Assets.xcassets */; };
 		18D775D822AD963800AE281E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D775DA22AD963800AE281E /* LaunchScreen.storyboard */; };
+		5855DDD80315F857A5E53254 /* Pods_PotionsMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549095D20812F2FC5C47F6E7 /* Pods_PotionsMaster.framework */; };
 		84029D4E24B6BEAA00EDA4B7 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84029D4D24B6BEAA00EDA4B7 /* Ingredient.swift */; };
 		84029D5224B7860500EDA4B7 /* IngredientForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84029D5124B7860500EDA4B7 /* IngredientForm.swift */; };
 		84029D5524B7897600EDA4B7 /* IngredientStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84029D5424B7897600EDA4B7 /* IngredientStore.swift */; };
@@ -30,6 +31,8 @@
 		18D775C922AD944400AE281E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18D775CE22AD944400AE281E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D775DE22AD96B400AE281E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		549095D20812F2FC5C47F6E7 /* Pods_PotionsMaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PotionsMaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74806BD057D13CDA3F9A57CB /* Pods-PotionsMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PotionsMaster.debug.xcconfig"; path = "Target Support Files/Pods-PotionsMaster/Pods-PotionsMaster.debug.xcconfig"; sourceTree = "<group>"; };
 		84029D4D24B6BEAA00EDA4B7 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		84029D5124B7860500EDA4B7 /* IngredientForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientForm.swift; sourceTree = "<group>"; };
 		84029D5424B7897600EDA4B7 /* IngredientStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientStore.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		84D08AAF24B8DAE000B73A2C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D08AB024B8DAE000B73A2C /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		84EAA77824BADCD00004B53F /* IngredientListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientListView.swift; sourceTree = "<group>"; };
+		A559DC44471214567BE3A0D4 /* Pods-PotionsMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PotionsMaster.release.xcconfig"; path = "Target Support Files/Pods-PotionsMaster/Pods-PotionsMaster.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5855DDD80315F857A5E53254 /* Pods_PotionsMaster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +63,8 @@
 			children = (
 				18D775BF22AD944300AE281E /* PotionsMaster */,
 				18D775BE22AD944300AE281E /* Products */,
+				ED5464F0A82AA4ACB6DEE948 /* Pods */,
+				25C85FE88155BB061F65D79C /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -95,6 +102,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		25C85FE88155BB061F65D79C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				549095D20812F2FC5C47F6E7 /* Pods_PotionsMaster.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		30F41A2824D7D7D1007486D7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +140,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		ED5464F0A82AA4ACB6DEE948 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74806BD057D13CDA3F9A57CB /* Pods-PotionsMaster.debug.xcconfig */,
+				A559DC44471214567BE3A0D4 /* Pods-PotionsMaster.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,10 +157,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18D775D122AD944400AE281E /* Build configuration list for PBXNativeTarget "PotionsMaster" */;
 			buildPhases = (
+				3B4A01E51623983CA1359879 /* [CP] Check Pods Manifest.lock */,
 				181FE31D248EA6C900A180EA /* ShellScript */,
 				18D775B922AD944300AE281E /* Sources */,
 				18D775BA22AD944300AE281E /* Frameworks */,
 				18D775BB22AD944300AE281E /* Resources */,
+				D7F47C530DE66B0A2F0794F3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -209,6 +236,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [ -f ~/com.raywenderlich.swiftlint.yml ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint --no-cache --config ~/com.raywenderlich.swiftlint.yml\n  fi\nfi\n";
+		};
+		3B4A01E51623983CA1359879 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PotionsMaster-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7F47C530DE66B0A2F0794F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PotionsMaster/Pods-PotionsMaster-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PotionsMaster/Pods-PotionsMaster-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PotionsMaster/Pods-PotionsMaster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -363,6 +429,7 @@
 		};
 		18D775D222AD944400AE281E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74806BD057D13CDA3F9A57CB /* Pods-PotionsMaster.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -383,6 +450,7 @@
 		};
 		18D775D322AD944400AE281E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A559DC44471214567BE3A0D4 /* Pods-PotionsMaster.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
