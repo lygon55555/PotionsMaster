@@ -37,3 +37,13 @@ struct Ingredient: Identifiable {
   let bought: Bool
   let quantity: Int
 }
+
+extension Ingredient {
+  init(ingredientDB: IngredientDB) {
+    id = ingredientDB.id
+    title = ingredientDB.title
+    notes = ingredientDB.notes
+    bought = ingredientDB.bought
+    quantity = ingredientDB.quantity
+  }
+}

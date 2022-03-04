@@ -1,4 +1,4 @@
-/// Copyright (c) 2020 Razeware LLC
+/// Copyright (c) 2022 Razeware LLC
 /// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -30,46 +30,21 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import Foundation
 import RealmSwift
 
-final class IngredientStore: ObservableObject {
-  var ingredients: [Ingredient] = IngredientMock.ingredientsMock
-  var boughtIngredients: [Ingredient] = IngredientMock.boughtIngredientsMock
-}
-
-// MARK: - CRUD Actions
-extension IngredientStore {
-  func create(title: String, notes: String, quantity: Int) {
-    // First, you send a signal to SwiftUI. Because IngredientStore is an ObservableObject, SwiftUI subscribes to objectWillChange and responds to the signal by reloading its view.
-    objectWillChange.send()
-    
-    do {
-      let realm = try Realm()
-      
-      let ingredientDB = IngredientDB()
-      ingredientDB.id = UUID().hashValue
-      ingredientDB.title = title
-      ingredientDB.notes = notes
-      ingredientDB.quantity = quantity
-      
-      try realm.write {
-        realm.add(ingredientDB)
-      }
-    } catch let error {
-      print(error.localizedDescription)
-    }
+// Object is Realm's base class for all data models
+class IngredientDB: Object {
+  @objc dynamic var id = 0
+  @objc dynamic var title = ""
+  @objc dynamic var notes = ""
+  @objc dynamic var quantity = 1
+  @objc dynamic var bought = false
+  
+  // override primaryKey() to tell Realm which property is the model's primary key
+  // Realm uses primary keys to enforce uniqueness.
+  // A primary key provides an efficient way to fetch and update data.
+  override static func primaryKey() -> String? {
+    return "id"
   }
-
-  func toggleBought(ingredient: Ingredient) {
-    // TODO: Add Realm update code below
-  }
-
-  func update(ingredientID: Int, title: String, notes: String, quantity: Int) {
-    // TODO: Add Realm update code below
-  }
-
-  func delete(ingredientID: Int) {
-    // TODO: Add Realm delete code below
-  }
+  
 }
