@@ -36,19 +36,20 @@ import RealmSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   var window: UIWindow?
+  
+  @StateObject var order = Order()
 
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-    
-    RealmMigrator.setDefaultConfiguration()
     
     if let windowScene = scene as? UIWindowScene {
       do {
         let realm = try Realm()
         let window = UIWindow(windowScene: windowScene)
         
-        let contentView = ContentView()
-          .environmentObject(IngredientStore(realm: realm))
-        window.rootViewController = UIHostingController(rootView: contentView)
+        let mainView = MainView()
+          .environmentObject(order)
+          .environmentObject(FavoriteStore(realm: realm))
+        window.rootViewController = UIHostingController(rootView: mainView)
         self.window = window
         window.makeKeyAndVisible()
       } catch let error {
